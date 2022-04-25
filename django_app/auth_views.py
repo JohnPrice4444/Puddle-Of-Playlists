@@ -46,19 +46,19 @@ def handle_logout(request):
 
 
 
-def get_lyrics(request):
-    try:
-        data = json.loads(request.body)
-        print(data)
-        searchItem1 = data["artistName"]
-        searchItem2 = data["songName"]
-        response = requests.get(f'https://api.lyrics.ovh/v1/{searchItem1}/{searchItem2}')
-        print(response)
-        return JsonResponse(data={"Lyrics": response}, status=200)
-    except Exception as e:
-        return error_on_request(str(e))
+# def get_lyrics(request):
+#     try:
+#         data = json.loads(request.body)
+#         print(data)
+#         searchItem1 = data["artistName"]
+#         searchItem2 = data["songName"]
+#         response = requests.get(f'https://api.lyrics.ovh/v1/{searchItem1}/{searchItem2}')
+#         print(response)
+#         return JsonResponse(data={"Lyrics": response}, status=200)
+#     except Exception as e:
+#         return error_on_request(str(e))
     
-    return bad_request()
+#     return bad_request()
 
 
 # def handle_artmaker(request):

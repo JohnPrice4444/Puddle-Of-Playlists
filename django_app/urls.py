@@ -15,5 +15,5 @@ urlpatterns = [
     path('login/', handle_login),
     path('logout/', handle_logout),
     # path('artmaker/', handle_artmaker),
-    path('lyrics/', get_lyrics)
+    # path('lyrics/', get_lyrics)
 ]
